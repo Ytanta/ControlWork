@@ -4,6 +4,7 @@ int Line = Convert.ToInt32(Console.ReadLine());
 string[] UserArray = CreateArraeString(Line);
 const string quote = "\"";
 PrintArray(UserArray);
+PrintArray3Character(UserArray);
 
 
 
@@ -25,12 +26,25 @@ void PrintArray(string[] arr)
     Console.Write("[");
     for (int i = 0; i < arr.Length; i++)
     {
-        if (i < arr.Length - 1) Console.Write($"{quote} {arr[i]} {quote}, ");
-        else Console.Write($"{quote} {arr[i]} {quote}");
+        if (i < arr.Length - 1) Console.Write($"{quote}{arr[i]}{quote}, ");
+        else Console.Write($"{quote}{arr[i]}{quote} ");
+    }
+    Console.Write("] =>");
+}
+
+void PrintArray3Character(string[] arr)
+{
+    {
+    Console.Write(" [");
+    for (int i = 0; i < arr.Length; i++)
+    { 
+        if(arr[i].Length==3)
+        if (i < arr.Length - 1) Console.Write($"{quote}{arr[i]}{quote}, ");
+        else Console.Write($"{quote}{arr[i]}{quote}");
     }
     Console.Write("]");
 }
-
+}
 
 
 
